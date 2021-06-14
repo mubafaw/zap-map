@@ -14,7 +14,7 @@ A Single restful API endpoint which would return all the stations that fall with
 1. Clone or copy repo
 
 2. Navigate to root folder of project<br>
-   cd zap-map
+   `cd zap-map`
 
 3. Build Image and Run container<br>
    ./vendor/bin/sail up
