@@ -11,30 +11,33 @@ A Single restful API endpoint which would return all the stations that fall with
 
 ## Running Instructions (In WSL2 or Linux bash )
 
-1. Clone or copy repo
+1. Clone or copy repo<br>
 
 2. Navigate to root folder of project<br>
    `cd zap-map`
 
-3. Build Image and Run container<br>
+3. Install dependencies<br>
+   `composer install`
+
+4. Build Image and Run container<br>
    `./vendor/bin/sail up`
 
-4. Run migration<br>
+5. Run migration<br>
    `./vendor/bin/sail artisan migrate --path=/database/migrations/2021_06_11_021909_create_stations_table.php`
 
-5. Seed database with csv data<br>
+6. Seed database with csv data<br>
    `./vendor/bin/sail composer install`
 
-6. Run command to seed database with csv data<br>
+7. Run command to seed database with csv data<br>
    `./vendor/bin/sail artisan load:csv`
 
-7. Test end point<br>
+8. Test end point<br>
    `http://localhost/api/stations/stations/{latitude}/{longitude}/{radius}`
 
     Example<br>
     `http://localhost/api/stations/51.47560393/-2.380716715/10`
 
-8. To shutdown<br>
+9. To shutdown<br>
    `./vendor/bin/sail down`
 
 ## Additional Composer Package & Formula reference
