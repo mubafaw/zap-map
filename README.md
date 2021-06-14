@@ -25,19 +25,16 @@ A Single restful API endpoint which would return all the stations that fall with
 5. Run migration<br>
    `./vendor/bin/sail artisan migrate --path=/database/migrations/2021_06_11_021909_create_stations_table.php`
 
-6. Seed database with csv data<br>
-   `./vendor/bin/sail composer install`
-
-7. Run command to seed database with csv data<br>
+6. Run command to seed database with csv data<br>
    `./vendor/bin/sail artisan load:csv`
 
-8. Test end point<br>
+7. Test end point<br>
    `http://localhost/api/stations/stations/{latitude}/{longitude}/{radius}`
 
     Example<br>
     `http://localhost/api/stations/51.47560393/-2.380716715/10`
 
-9. To shutdown<br>
+8. To shutdown<br>
    `./vendor/bin/sail down`
 
 ## Additional Composer Package & Formula reference
